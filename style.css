@@ -1,0 +1,151 @@
+/* Style for body */
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style for header */
+header {
+	background-color: #8FB7C5;
+	padding: 20px;
+	text-align: center;
+}
+
+h1 {
+	color: #FFFFFF;
+	margin: 0;
+}
+
+/* Style for navigation */
+nav {
+	background-color: #CDD6D8;
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+li {
+	margin: 0 10px;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+	color: #8FB7C5;
+}
+
+/* Style for main section */
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 0;
+	text-align: center;
+}
+
+ul {
+	margin-top: 30px;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 30px;
+}
+
+li {
+	border: 1px solid #CDD6D8;
+	padding: 20px;
+	position: relative;
+}
+
+li:hover img {
+	transform: scale(1.2);
+}
+
+h3 {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	transition: all 0.2s ease-in-out;
+}
+
+p {
+	font-size: 0.9em;
+	margin: 10px 0;
+}
+
+span {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+/* Style for footer */
+footer {
+	background-color: #CDD6D8;
+	padding: 10px;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+/* Animations */
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+li:nth-child(odd) {
+	animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+li:nth-child(even) {
+	animation: slideUp 0.5s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 768px) {
+	ul {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 20px;
+	}
+}
