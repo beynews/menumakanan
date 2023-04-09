@@ -88,6 +88,10 @@ li {
 	background-color: #FFFFFF;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in-out;
+	max-height: 200px;
+	/* add max-height property */
+	overflow: hidden;
+	/* add overflow property */
 }
 
 li:hover {
